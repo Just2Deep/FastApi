@@ -6,6 +6,7 @@ from .config import settings
 
 models.Base.metadata.create_all(bind=engine)
 
+print(settings.access_token_expire_minutes)
 app = FastAPI()
 
 app.include_router(post.router)
